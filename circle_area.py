@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
-pi = 3.14159
-raio = 15.3
-circlo_area = pi * raio ** 2
-print('circlo area: ', circlo_area)
+from math import pi
+
+# Adicionando uma entrada do usário.
+
+raio = input('Raio: ')
+circlo_area = pi * float(raio) ** 2
+print(circlo_area)
