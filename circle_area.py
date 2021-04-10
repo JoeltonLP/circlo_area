@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-# circle_area_v8
+
+# circle_area_v9 Arguments on command line
 
 from math import pi
+import sys
 
-raio = input('Raio: ')
+raio = sys.argv[1]
 
 
 def return_circle_area(raio):
@@ -15,4 +17,4 @@ def return_circle_area(raio):
 circle_area = return_circle_area(raio)
 
 
-print(circle_area)
+print('Circle area: ', circle_area)
