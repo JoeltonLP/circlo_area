@@ -1,20 +1,23 @@
 #!/usr/bin/python3
-
-# circle_area_v9 Arguments on command line
-
-from math import pi
 import sys
 
-raio = sys.argv[1]
+from math import pi
 
 
-def return_circle_area(raio):
-    circle_area = pi * float(raio) ** 2
-
-    return circle_area
-
-
-circle_area = return_circle_area(raio)
+def area_circle(raio):
+    raio = pi * float(raio) ** 2
+    return raio
 
 
-print('Circle area: ', circle_area)
+def help():
+    print('needs an argument\n')
+    print('sintaxe:')
+    print('use: {} <raio>\n' .format(sys.argv[0]))
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        help()
+    else:
+        area = area_circle(sys.argv[1])
+        print('Area Circle: {:.2f}' .format(area))
